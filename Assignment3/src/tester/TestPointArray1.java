@@ -47,7 +47,7 @@ public class TestPointArray1 {
 			case 3: {
 				System.out.println("Enter the index 1 - ");
 				index1 = sc.nextInt();
-				if (!(0 <= index1 && index1 < count - 1)) {
+				if (!(0 <= index1 && index1 <= count - 1)) {
 					System.out.println("Invalid index");
 					break;
 				}
