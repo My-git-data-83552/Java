@@ -3,7 +3,6 @@ package com.app.geometry;
 import java.util.Scanner;
 import java.lang.Math;
 
-
 public class Point2D {
 	private int xaxis;
 	private int yaxis;
@@ -45,13 +44,16 @@ public class Point2D {
 		else
 			return false;
 	}
-	public double distance(Point2D p2)
-	{
-        double distance = Math.sqrt(Math.pow((p2.getxaxis() - this.xaxis), 2) + Math.pow((p2.getYaxis() - this.yaxis), 2));
+
+	public double distance(Point2D p2) {
+		double distance = Math
+				.sqrt(Math.pow((p2.getxaxis() - this.xaxis), 2) + Math.pow((p2.getYaxis() - this.yaxis), 2));
+
 		return distance;
 	}
-
 	
+	
+
 	public void accept() {
 		int x;
 		int y;
@@ -62,4 +64,5 @@ public class Point2D {
 		this.xaxis = x;
 		this.yaxis = y;
 	}
+
 }
