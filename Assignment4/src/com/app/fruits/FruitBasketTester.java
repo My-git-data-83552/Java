@@ -35,6 +35,7 @@ public class FruitBasketTester {
 				if (counter < size)
 					basket[counter] = new Mango();
 				basket[counter].accept(sc);
+				basket[counter].setFresh(true);
 				counter++;
 				break;
 
@@ -42,6 +43,7 @@ public class FruitBasketTester {
 				if (counter < size)
 					basket[counter] = new Orange();
 				basket[counter].accept(sc);
+				basket[counter].setFresh(true);
 				counter++;
 				break;
 
@@ -49,6 +51,7 @@ public class FruitBasketTester {
 				if (counter < size)
 					basket[counter] = new Apple();
 				basket[counter].accept(sc);
+				basket[counter].setFresh(true);
 				counter++;
 				break;
 
@@ -66,34 +69,54 @@ public class FruitBasketTester {
 						System.out.println(element.toString());
 						System.out.println(element.isFresh());
 						System.out.println(element.taste());
-
 					}
 				}
 				break;
 
 			case 6:
-				for (Fruit element : basket)
-					if (element.isFresh() == false) {
-						System.out.println(element.getName());
-						System.out.println(element.taste());
-					}
+//				for (Fruit element : basket)
+//					if (element.isFresh() == false && element != null) {
+//						System.out.println(element.getName());
+//						System.out.println(element.taste());
+//					}
+				for (int i = 0; i < counter; i++) {
+//					System.out.println(basket[i].isFresh());
+					if (basket[i].isFresh() == false) {
+						System.out.println("condition true");
+						System.out.print(basket[i].getName() + "  - ");
+						System.out.println(basket[i].taste());
+					} 
+				}
 				break;
 
 			case 7:
 				System.out.print("Which fruit is stale? - ");
+				for (int i = 0; i < counter; i++) {
+					if (basket[i] != null)
+						System.out.println(i + ") " + basket[i].getName() + " - " + basket[i].isFresh());
+				}
 				counter = sc.nextInt();
-				if (counter < size)
+				if (counter < size) {
 					basket[counter].setFresh(false);
-				else
+					System.out.println("Marked " + basket[counter].getName() + " as Stale!");
+				} else
 					System.out.println("Invalid Index number...");
 				break;
 
 			case 8:
-				for (Fruit ele : basket)
-					if (ele.taste() == "sour" || ele.taste() == "sweet and sour") {
-						ele.setFresh(false);
-						System.out.println(ele.getName());
+//				for (Fruit ele : basket)
+//					if (ele.taste() == "sour" /*|| ele.taste() == "sweet and sour"*/) {
+//					if (ele.taste().equals("sour")) {
+//						ele.setFresh(false);
+//						System.out.println(ele.getName());
+//					}
+				for (int i = 0; i < counter; i++) {
+					if (basket[i].taste().equals("sour")) {
+						basket[i].setFresh(false);
+						System.out.println(basket[i].getName());
 					}
+				}
+
 				break;
 
 			default:
