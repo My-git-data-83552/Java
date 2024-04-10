@@ -2,10 +2,10 @@ package com.sunbeam;
 
 import java.util.Scanner;
 
-public class SalariedEmpleoyee extends Employee {
+public class SalariedEmployee extends Employee {
 	private double weeklySalary;
 
-	public SalariedEmpleoyee() {
+	public SalariedEmployee() {
 		// TODO Auto-generated constructor stub
 		weeklySalary = 40000;
 	}

@@ -7,7 +7,7 @@ import com.sunbeam.BasePlusCommisionEmployee;
 import com.sunbeam.CommisionEmployee;
 import com.sunbeam.Employee;
 import com.sunbeam.HourlyEmployee;
-import com.sunbeam.SalariedEmpleoyee;
+import com.sunbeam.SalariedEmployee;
 
 public class Tester {
 
@@ -26,7 +26,7 @@ public class Tester {
 			break;
 
 		case 1:
-			e = new SalariedEmpleoyee();
+			e = new SalariedEmployee();
 			e.accept(sc);
 			e.display();
 			break;
